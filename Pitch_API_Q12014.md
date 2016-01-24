@@ -2,11 +2,7 @@ Pitch_API_Q12014
 ========================================================
 author: Yuhanis Yusoff
 date: 25th Jan 2016
-
-
-========================================================
-
-<h1>Air Pollution Index (API) in Malaysia</h1>
+<h2>Air Pollution Index (API) in Malaysia</h2>
 <h3>For Q1 2014</h3>
 
 Background
@@ -34,20 +30,25 @@ For the nice look and feel for this apps, I use shinydashboard library (https://
 Slide With Code
 ========================================================
 
-To display the dashboard below code is used
 
 ```r
-summary(cars)
+api <- read.csv("15-BacaanIPU-JanToMarch2014-cleanedData.csv", stringsAsFactors = FALSE)
+dim(api)
 ```
 
 ```
-     speed           dist       
- Min.   : 4.0   Min.   :  2.00  
- 1st Qu.:12.0   1st Qu.: 26.00  
- Median :15.0   Median : 36.00  
- Mean   :15.4   Mean   : 42.98  
- 3rd Qu.:19.0   3rd Qu.: 56.00  
- Max.   :25.0   Max.   :120.00  
+[1] 4528    5
+```
+
+```r
+head(api, 3)
+```
+
+```
+    Tarikh  Waktu Negeri    Kawasan API
+1 1/1/2014 1:00PM Perlis     Kangar  59
+2 1/1/2014 1:00PM  Kedah   Langkawi  46
+3 1/1/2014 1:00PM  Kedah Alor Setar  35
 ```
 
 Slide With Plot

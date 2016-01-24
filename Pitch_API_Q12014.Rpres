@@ -2,11 +2,7 @@ Pitch_API_Q12014
 ========================================================
 author: Yuhanis Yusoff
 date: 25th Jan 2016
-
-
-========================================================
-
-<h1>Air Pollution Index (API) in Malaysia</h1>
+<h2>Air Pollution Index (API) in Malaysia</h2>
 <h3>For Q1 2014</h3>
 
 Background
@@ -34,14 +30,18 @@ For the nice look and feel for this apps, I use shinydashboard library (https://
 Slide With Code
 ========================================================
 
-To display the dashboard below code is used
 ```{r}
-summary(cars)
+api <- read.csv("15-BacaanIPU-JanToMarch2014-cleanedData.csv", stringsAsFactors = FALSE)
+dim(api)
+head(api, 3)
 ```
 
 Slide With Plot
 ========================================================
 
 ```{r, echo=FALSE}
-plot(cars)
+library(ggplot2)
+ggplot(api, aes(API)) +
+    geom_histogram(binwidth = 0.5)
+
 ```
