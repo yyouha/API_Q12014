@@ -9,7 +9,8 @@ dashboardPage(
   dashboardSidebar(
     sidebarMenu(
       menuItem("Dashboard", tabName = "dashboard", icon = icon("dashboard")),
-      menuItem("Help/Documentation", tabName = "menu", icon = icon("th"))
+      menuItem("Help/Documentation", tabName = "menu", icon = icon("th")),
+      menuItem("Git Repo", tabName = "git", icon = icon("th"))
     )
   ),
   ## Body content
@@ -45,6 +46,12 @@ dashboardPage(
                  br(), br(), "This project made use of the following packages: shiny, shinydashboard, ggplot to display plot and analysis of IPU reading in Malaysia.",
                  br(), br(), "Select the state to view the result for each state,",
                  br(), br(), "For the nice look and feel for this apps, I use shinydashboard library (https://rstudio.github.io/shinydashboard/get_started.html)"
+              )
+      ),
+      # third tab content
+      tabItem(tabName = "git",
+              h4("Github Repo link : https://github.com/yyouha/API_Q12014",
+                 br(), br(),"You can get the ui.R, server.R and the dataset from there."
               )
       )
     )
